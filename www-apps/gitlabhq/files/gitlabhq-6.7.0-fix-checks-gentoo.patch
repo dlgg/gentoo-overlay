@@ -1,6 +1,6 @@
---- lib/tasks/gitlab/check.rake.orig	2013-11-16 21:51:59.570000000 +0100
-+++ lib/tasks/gitlab/check.rake	2013-11-16 21:52:40.900000000 +0100
-@@ -20,8 +20,6 @@
+--- lib/tasks/gitlab/check.rake.orig     2014-03-25 12:14:19.732942320 +0100
++++ lib/tasks/gitlab/check.rake  2014-03-25 12:32:19.265108551 +0100
+@@ -22,8 +22,6 @@
        check_gitlab_config_not_outdated
        check_log_writable
        check_tmp_writable
@@ -9,13 +9,3 @@
        check_projects_have_namespace
        check_satellites_exist
        check_redis_version
-@@ -607,7 +605,8 @@
-     ########################
- 
-     def gitlab_shell_user_home
--      File.expand_path("~#{Gitlab.config.gitlab_shell.ssh_user}")
-+      #File.expand_path("~#{Gitlab.config.gitlab_shell.ssh_user}")
-+      File.dirname(File.dirname(File.expand_path("#{Gitlab.config.gitlab_shell.hooks_path}")))
-     end
- 
-     def gitlab_shell_version
