@@ -5,7 +5,7 @@
 *r8168-8.038.00-r1 (15 Jul 2014)
 
   15 Jul 2014; Damien Lesgourgues <damien@lesgourgues.fr>+r8168-8.038.00-r1.ebuild:
-  Adda a patch for linux 3.15 support
+  Add a patch for linux 3.15 support
 
 *r8168-8.038.00 (18 Mar 2014)
 
