@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/net-misc/r8168/ChangeLog,v 1.16 2014/03/18 16:45:02 joker Exp $
 
+*r8168-8.038.00-r1 (15 Jul 2014)
+
+  15 Jul 2014; Damien Lesgourgues <damien@lesgourgues.fr>+r8168-8.038.00-r1.ebuild:
+  Adda a patch for linux 3.15 support
+
 *r8168-8.038.00 (18 Mar 2014)
 
   18 Mar 2014; Christian Birchinger <joker@gentoo.org> +r8168-8.038.00.ebuild:
