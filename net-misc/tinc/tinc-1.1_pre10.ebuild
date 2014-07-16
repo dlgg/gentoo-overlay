@@ -11,7 +11,7 @@ SRC_URI="http://www.tinc-vpn.org/packages/tinc-1.1pre10.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="+lzo uml vde +zlib"
 
 DEPEND="dev-libs/openssl
@@ -19,6 +19,11 @@ DEPEND="dev-libs/openssl
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
 	vde? ( net-misc/vde )"
+
+src_unpack() {
+    unpack tinc-1.1pre10.tar.gz
+    mv tinc-1.1pre10 tinc-1.1_pre10
+}
 
 src_configure() {
 	econf \
