@@ -20,6 +20,11 @@ DEPEND="dev-libs/openssl
 RDEPEND="${DEPEND}
 	vde? ( net-misc/vde )"
 
+src_unpack() {
+    unpack tinc-1.1pre9.tar.gz
+    mv tinc-1.1pre9 tinc-1.1_pre9
+}
+
 src_configure() {
 	econf \
 		--enable-jumbograms \
