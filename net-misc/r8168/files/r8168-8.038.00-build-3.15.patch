@@ -1,0 +1,11 @@
+--- a/src/r8168_n.c	2014-07-15 16:35:23.813508555 +0200
++++ b/src/r8168_n.c	2014-07-15 16:35:45.588913689 +0200
+@@ -19119,7 +19119,7 @@
+ {
+     struct rtl8168_private *tp = netdev_priv(dev);
+ 
+-    PREPARE_DELAYED_WORK(&tp->task, task);
++    INIT_DELAYED_WORK(&tp->task, task);
+     schedule_delayed_work(&tp->task, 4);
+ }
+ #endif
