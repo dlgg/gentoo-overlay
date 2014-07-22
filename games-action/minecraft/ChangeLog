@@ -1,0 +1,17 @@
+# ChangeLog for games-action/minecraft
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  08 Jan 2014; Haydania-Capri <me@capri.pw> minecraft-9999.ebuild:
+  As a RDEPEND dev-java/sun-jre-bin has been hard masked since
+  the 30th of June. 
+
+  20 Nov 2013; Haydania-Capri DiTori <me@capri.pw> +files/minecraft.png:
+  Forgot to add files.
+
+*minecraft-9999 (11 Nov 2013)
+
+  11 Nov 2013; Haydania-Capri DiTori <me@capri.pw> +minecraft-9999.ebuild,
+  +metadata.xml:
+  Added live build.
+
