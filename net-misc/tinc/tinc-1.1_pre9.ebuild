@@ -15,6 +15,7 @@ KEYWORDS="amd64 ~arm ~mips ~ppc ~ppc64 ~sparc x86 amd64-linux x86-linux ~ppc-mac
 IUSE="+lzo uml vde +zlib"
 
 DEPEND="dev-libs/openssl
+    sys-apps/usermode-utilities
 	lzo? ( dev-libs/lzo:2 )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
