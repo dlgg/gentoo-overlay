@@ -1,0 +1,14 @@
+--- a/src/r8168_n.c	2014-07-15 16:35:23.813508555 +0200
++++ b/src/r8168_n.c	2014-07-15 16:35:45.588913689 +0200
+@@ -17542,7 +17542,11 @@
+ 
+     RTL_NET_DEVICE_OPS(rtl8168_netdev_ops);
+ 
++#if LINUX_VERSION_CODE < KERNEL_VERSION(3,16,0)
+     SET_ETHTOOL_OPS(dev, &rtl8168_ethtool_ops);
++#else
++    dev->ethtool_ops = &rtl8168_ethtool_ops;
++#endif
+ 
+     dev->watchdog_timeo = RTL8168_TX_TIMEOUT;
+     dev->irq = pdev->irq;

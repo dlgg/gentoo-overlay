@@ -23,6 +23,7 @@ ERROR_R8169="${P} requires Realtek 8169 PCI Gigabit Ethernet adapter (CONFIG_R81
 
 src_prepare() {
     epatch "${FILESDIR}/${P}-build-3.15.patch"
+    epatch "${FILESDIR}/${P}-build-3.16.patch"
 }
 
 pkg_setup() {
