@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ~arm ~mips ~ppc ~ppc64 ~sparc x86 amd64-linux x86-linux ~ppc-macos ~x86-macos"
 IUSE="+lzo uml vde +zlib"
 
-DEPEND="dev-libs/openssl
+DEPEND="dev-libs/openssl[-bindist]
     sys-apps/usermode-utilities
 	lzo? ( dev-libs/lzo:2 )
 	zlib? ( sys-libs/zlib )"
